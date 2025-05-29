@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weight Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="phone-frame">
+    <header>
+      <h1>⚖️ Weight Tracker</h1>
+    </header>
+
+    <main>
+      <section id="home-screen">
+        <h2>📅 Habit Log</h2>
+        <ul id="habit-log" class="habit-log"></ul>
+      </section>
+
+      <section id="detail-screen" class="detail-screen" style="display: none;">
+        <h2 id="detail-date">Habit for [date]</h2>
+        <input type="number" step="0.1" placeholder="Enter weight" id="weight-input" />
+        <button id="save-weight">Save</button>
+        <p>Status: <span id="weight-status">--</span></p>
+
+        <div class="summary-box">
+          <h3>📈 Progress Samenvatting</h3>
+          <p>Verschil t.o.v. gisteren: <span id="diff-yesterday">--</span></p>
+          <p>Laatste 7 dagen: <span id="diff-week">--</span></p>
+          <p>Gemiddelde per dag: <span id="avg-daily-change">--</span></p>
+        </div>
+
+        <button id="back-to-home" class="back-button">⬅ Terug</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="nav-icon active">🏠</div>
+      <div class="nav-icon">👤</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+jjjjj
