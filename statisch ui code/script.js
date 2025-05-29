@@ -6,3 +6,10 @@ const weightInput = document.getElementById('weight-input');
 const saveWeightBtn = document.getElementById('save-weight');
 const weightStatus = document.getElementById('weight-status');
 const backBtn = document.getElementById('back-to-home');
+
+let habits = [];
+let selectedIndex = null;
+
+function getTodayStr() {
+  return new Date().toISOString().split('T')[0];
+}
