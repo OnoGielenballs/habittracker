@@ -18,6 +18,36 @@ function createHabitArray() {
   const today = getTodayStr();
   let arr = [];
 
+  for (let i = 9; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+
+    // Simuleer gewicht voor alle dagen behalve vandaag
+    let gewicht = null;
+    let status = "gemist";
+
+    if (dateStr !== today) {
+      // Voorbeeldgewicht 70-73 kg, 1 decimaal
+      gewicht = parseFloat((70 + Math.random() * 3).toFixed(1));
+      status = "gedaan";
+    }
+
+    // Check localStorage (prioriteit)
+    const storedWeight = localStorage.getItem(`weight-${dateStr}`);
+    if (storedWeight !== null) {
+      gewicht = parseFloat(storedWeight);
+      status = "gedaan";
+    }
+
+    arr.push({
+      habit: "gewicht",
+      duration: null,  // geen duur relevant hier, maar kan ingevuld worden als voorbeeld
+      date: dateStr,
+      weight: gewicht,
+      status: status,
+    });
+  }
   
 
 }
