@@ -48,6 +48,6 @@ function createHabitArray() {
       status: status,
     });
   }
-  
+  return arr;
 
 }
