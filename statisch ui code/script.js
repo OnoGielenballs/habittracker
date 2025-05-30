@@ -52,11 +52,11 @@ function createHabitArray() {
 
 }
 
-function loadhabits() {
+function loadHabits() {
   habits = createHabitArray();
   sortHabits();
 }
 
-function sorthabits() {
+function sortHabits() {
   habits.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
