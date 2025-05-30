@@ -51,3 +51,8 @@ function createHabitArray() {
   return arr;
 
 }
+
+function loadhabits() {
+  habits = createHabitArray();
+  sortHabits();
+}
