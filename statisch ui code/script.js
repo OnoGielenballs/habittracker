@@ -56,3 +56,7 @@ function loadhabits() {
   habits = createHabitArray();
   sortHabits();
 }
+
+function sorthabits() {
+  habits.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
