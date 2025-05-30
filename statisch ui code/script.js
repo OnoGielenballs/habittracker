@@ -10,6 +10,10 @@ const backBtn = document.getElementById('back-to-home');
 let habits = [];
 let selectedIndex = null;
 
-function getTodayStr() {
-  return new Date().toISOString().split('T')[0];
+function createHabitArray() {
+  const today = getTodayStr();
+  let arr = [];
+
+
+  
 }
