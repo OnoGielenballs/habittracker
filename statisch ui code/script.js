@@ -100,4 +100,10 @@ function updateSummary(index) {
     const diff = currentWeight - habits[index + 1].weight;
     yesterdayDiff = (diff >= 0 ? '+' : '') + diff.toFixed(1) + ' kg';
   }
+
+  const recentWeights = [];
+  for (let i = index; i < index + 7 && i < habits.length; i++) {
+    const w = habits[i].weight;
+    if (typeof w === 'number' && w !== null) recentWeights.push(w);
+  }
 }
