@@ -88,3 +88,13 @@ function openDetail(index) {
   detailScreen.style.display = 'flex';
   updateSummary(index);
 }
+
+function updateSummary(index) {
+  const current = habits[index];
+  const currentWeight = current.weight;
+  let yesterdayDiff = '--';
+  let weekDiff = '--';
+  let avgPerDay = '--';
+
+  
+}
