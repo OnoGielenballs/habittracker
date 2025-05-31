@@ -106,4 +106,11 @@ function updateSummary(index) {
     const w = habits[i].weight;
     if (typeof w === 'number' && w !== null) recentWeights.push(w);
   }
+
+  if (recentWeights.length >= 2) {
+    const change = recentWeights[0] - recentWeights[recentWeights.length - 1];
+    const avg = change / (recentWeights.length - 1);
+    weekDiff = (change >= 0 ? '+' : '') + change.toFixed(1) + ' kg';
+    avgPerDay = (avg >= 0 ? '+' : '') + avg.toFixed(2) + ' kg/dag';
+  }
 }
