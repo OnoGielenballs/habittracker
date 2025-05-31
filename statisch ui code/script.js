@@ -75,5 +75,5 @@ function renderHabitLog() {
       <button>➤</button>
     `;
     li.addEventListener('click', () => openDetail(index));
-  })
+  });
 }
