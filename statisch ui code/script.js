@@ -113,4 +113,8 @@ function updateSummary(index) {
     weekDiff = (change >= 0 ? '+' : '') + change.toFixed(1) + ' kg';
     avgPerDay = (avg >= 0 ? '+' : '') + avg.toFixed(2) + ' kg/dag';
   }
+
+  document.getElementById('diff-yesterday').textContent = yesterdayDiff;
+  document.getElementById('diff-week').textContent = weekDiff;
+  document.getElementById('avg-daily-change').textContent = avgPerDay;
 }
