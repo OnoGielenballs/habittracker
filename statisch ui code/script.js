@@ -96,5 +96,8 @@ function updateSummary(index) {
   let weekDiff = '--';
   let avgPerDay = '--';
 
-  
+  if (index < habits.length - 1 && currentWeight !== null && habits[index + 1].weight !== null) {
+    const diff = currentWeight - habits[index + 1].weight;
+    yesterdayDiff = (diff >= 0 ? '+' : '') + diff.toFixed(1) + ' kg';
+  }
 }
