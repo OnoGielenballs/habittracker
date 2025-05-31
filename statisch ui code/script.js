@@ -60,3 +60,20 @@ function loadHabits() {
 function sortHabits() {
   habits.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
+
+function renderHabitLog() {
+  habitLogEl.innerHTML = '';
+
+  habits.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.className = 'habit-item';
+    li.innerHTML = `
+      <div class="info">
+        <span class="date">${item.date}</span>
+        <span class="status">${item.weight !== null ? item.weight + ' kg' : 'Geen data'} (${item.status})</span>
+      </div>
+      <button>➤</button>
+    `;
+    li.addEventListener('click', () => openDetail(index));
+  })
+}
