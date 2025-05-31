@@ -77,3 +77,14 @@ function renderHabitLog() {
     li.addEventListener('click', () => openDetail(index));
   });
 }
+
+function openDetail(index) {
+  selectedIndex = index;
+  const item = habits[index];
+  detailDateEl.textContent = `Habit for ${item.date}`;
+  weightInput.value = item.weight !== null ? item.weight : '';
+  weightStatus.textContent = item.status;
+  homeScreen.style.display = 'none';
+  detailScreen.style.display = 'flex';
+  updateSummary(index);
+}
