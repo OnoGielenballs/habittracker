@@ -118,3 +118,16 @@ function updateSummary(index) {
   document.getElementById('diff-week').textContent = weekDiff;
   document.getElementById('avg-daily-change').textContent = avgPerDay;
 }
+
+saveWeightBtn.addEventListener('click', () => {
+  const weight = parseFloat(weightInput.value);
+  if (!isNaN(weight)) {
+    const habit = habits[selectedIndex];
+    habit.weight = weight;
+    habit.status = "gedaan";
+    weightStatus.textContent = "gedaan";
+    localStorage.setItem(`weight-${habit.date}`, weight);
+    renderHabitLog();
+    updateSummary(selectedIndex);
+  }
+});
