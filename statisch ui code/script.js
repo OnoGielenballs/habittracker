@@ -14,6 +14,7 @@ function getTodayStr() {
   return new Date().toISOString().split('T')[0];
 }
 
+// Maak de array met 10 dagen, ieder item is een JSON object met meerdere eigenschappen
 function createHabitArray() {
   const today = getTodayStr();
   let arr = [];
@@ -49,7 +50,6 @@ function createHabitArray() {
     });
   }
   return arr;
-
 }
 
 function loadHabits() {
@@ -58,7 +58,7 @@ function loadHabits() {
 }
 
 function sortHabits() {
-  habits.sort((a, b) => (a.date < b.date ? 1 : -1));
+  habits.sort((a, b) => (a.date < b.date ? 1 : -1)); // nieuw naar oud
 }
 
 function renderHabitLog() {
@@ -75,6 +75,7 @@ function renderHabitLog() {
       <button>➤</button>
     `;
     li.addEventListener('click', () => openDetail(index));
+    habitLogEl.appendChild(li);
   });
 }
 
