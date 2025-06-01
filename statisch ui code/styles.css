@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #eaeef1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone-frame {
+  background: #ffffff;
+  width: 360px;
+  height: 640px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 16px;
+  background-color: #0077b6;
+  text-align: center;
+  color: #ffffff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+.habit-log {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.habit-item {
+  background: #f1f5f9;
+  padding: 14px 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.habit-item:hover {
+  background-color: #dbeafe;
+}
+
+.habit-item .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.date {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.status {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.detail-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.detail-screen input {
+  padding: 10px;
+  font-size: 15px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 1px solid #94a3b8;
+  background-color: #fff;
+}
+
+.detail-screen button {
+  padding: 10px 18px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #0077b6;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.summary-box {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #e0f2fe;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.summary-box h3 {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+footer {
+  background-color: #0077b6;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #cbd5e1;
+}
+
+.nav-icon {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.nav-icon.active {
+  font-weight: bold;
+  text-shadow: 0 0 2px #ffffff;
+}
