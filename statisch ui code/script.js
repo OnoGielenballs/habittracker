@@ -136,3 +136,6 @@ backBtn.addEventListener('click', () => {
   detailScreen.style.display = 'none';
   homeScreen.style.display = 'block';
 });
+
+loadHabits();
+renderHabitLog();
