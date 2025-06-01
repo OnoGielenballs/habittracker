@@ -131,3 +131,8 @@ saveWeightBtn.addEventListener('click', () => {
     updateSummary(selectedIndex);
   }
 });
+
+backBtn.addEventListener('click', () => {
+  detailScreen.style.display = 'none';
+  homeScreen.style.display = 'block';
+});
